@@ -1,55 +1,55 @@
-.section{
-  width: 100%;
-  height: 500px;
+.section {
+  margin-top: 100px;
   background: #f6f6f6;
-  &-rov{
+  @media screen and (max-width: 760px) {
+    margin-top: 0;
+  }
+  &-row {
     display: flex;
     gap: 80px;
     @media screen and (max-width: 760px) {
-      flex-direction: column-reverse;
-     align-items: center;
-     justify-content: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
-    
   }
-  &-tex{
+  &-pict {
     width: 50%;
-    padding-top: 55px;
+    @include media(768){
+      width: 100%;
+  }
+}
+&-pict img{
+  width: 100%;
+
+}
+  &-text {
+    width: 50%;
+    padding-top: 57px;
     @media screen and (max-width: 760px) {
       width: 100%;
       padding: 0 20px;
     }
   }
-  &-text{
+  &-title {
     font-weight: 500;
     font-size: 32px;
     line-height: 134%;
     color: #1f2e35;
+    padding-bottom: 24px;
+    &-red {
+      color: #ee4248;
+    }
   }
-  &-tex{
-    margin-top: 65px;
-  }
-  &-span{
-    font-weight: 500;
-    font-size: 32px;
-    line-height: 134%;
-    color: #ee4248;
-  }
-  &-tr{
+  &-subtitle {
     max-width: 520px;
     font-weight: 400;
     font-size: 18px;
     line-height: 150%;
     color: #30444e;
-  }
-  &-rd{
-    font-weight: 500;
-color: #ee4248;
-  }
-  &-image{
-    @media screen and (max-width: 760px) {
-       
-
-  }
+    &-red {
+      color: #ee4248;
+    }
   }
 }
